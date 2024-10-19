@@ -1,11 +1,11 @@
 package com.cuttlefish.dashboard;
 
-import com.cuttlefish.dashboard.config.ValueProvider;
+import config.ValueProvider;
 import com.cuttlefish.dashboard.message.Message;
 import com.cuttlefish.dashboard.message.redux.InitOpMode;
 import com.cuttlefish.dashboard.message.redux.ReceiveOpModeList;
 import com.cuttlefish.dashboard.message.redux.ReceiveRobotStatus;
-import com.cuttlefish.dashboard.telemetry.TelemetryPacket;
+import telemetry.TelemetryPacket;
 import com.cuttlefish.dashboard.testopmode.TestOpMode;
 import com.cuttlefish.dashboard.testopmode.TestOpModeManager;
 import fi.iki.elonen.NanoHTTPD;

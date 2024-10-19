@@ -2,10 +2,10 @@ package com.cuttlefish.dashboard;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.cuttlefish.dashboard.config.reflection.ReflectionConfig;
-import com.cuttlefish.dashboard.config.variable.BasicVariable;
-import com.cuttlefish.dashboard.config.variable.ConfigVariable;
-import com.cuttlefish.dashboard.config.variable.CustomVariable;
+import config.reflection.ReflectionConfig;
+import config.variable.BasicVariable;
+import config.variable.ConfigVariable;
+import config.variable.CustomVariable;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
 

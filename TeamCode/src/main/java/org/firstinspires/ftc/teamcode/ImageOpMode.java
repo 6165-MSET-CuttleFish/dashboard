@@ -12,7 +12,7 @@ public class ImageOpMode extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         FtcDashboard dashboard = FtcDashboard.getInstance();
-        //FtcDashboard.setDrawDefaultField(false);
+        //com.dashboardPlus.FtcDashboard.setDrawDefaultField(false);
         waitForStart();
 
         if (isStopRequested()) {

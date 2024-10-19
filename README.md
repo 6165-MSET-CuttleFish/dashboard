@@ -41,7 +41,7 @@ Check out our [online documentation](https://acmerobotics.github.io/ftc-dashboar
 1. Install Node.js
 
    - Note: Node.js 16+ is required for builds to work on M1 MacBooks
-   - Current Node version used in gradle builds can be found in [FtcDashboard/build.gradle](https://github.com/acmerobotics/ftc-dashboard/blob/master/FtcDashboard/build.gradle#L33)
+   - Current Node version used in gradle builds can be found in [com.dashboardPlus.FtcDashboard/build.gradle](https://github.com/acmerobotics/ftc-dashboard/blob/master/com.dashboardPlus.FtcDashboard/build.gradle#L33)
    - Node version is `18.12.1` as of time of writing
 
 2. Install Yarn
@@ -81,11 +81,11 @@ To test without an FTC app, run the mock server located at `DashboardCore/src/te
 
 ## Java Server
 
-Dashboard's server is split into two packages, `DashboardCore` and `FtcDashboard`
+Dashboard's server is split into two packages, `DashboardCore` and `com.dashboardPlus.FtcDashboard`
 
 - [Dashboard Core](https://github.com/acmerobotics/ftc-dashboard/tree/master/DashboardCore/src/main/java/com/acmerobotics/dashboard)
   - A standalone library that can be used to create a dashboard server for any Java application
-- [FtcDashboard](https://github.com/acmerobotics/ftc-dashboard/tree/master/FtcDashboard/src/main/java/com/acmerobotics/dashboard)
+- [com.dashboardPlus.FtcDashboard](https://github.com/acmerobotics/ftc-dashboard/tree/master/com.dashboardPlus.FtcDashboard/src/main/java/com/acmerobotics/dashboard)
   - A wrapper around `DashboardCore` that provides relevant tooling and hooks for FTC teams
   - Contains the API FTC teams will access and manipulate through their own code
   - This package also contains the browser client source
@@ -119,4 +119,4 @@ Primary interface as a web-client acessible to the end-user through a web browse
     - Storage middleware
     - etc
 - Views subscribe to websocket updates via the Redux store
-  - Basic example can be found in the [`TelemetryView`](https://github.com/acmerobotics/ftc-dashboard/blob/8ac8b29257dede5f4a13c440fe6756efc270cbb8/FtcDashboard/dash/src/components/views/TelemetryView.tsx#L21) component
+  - Basic example can be found in the [`TelemetryView`](https://github.com/acmerobotics/ftc-dashboard/blob/8ac8b29257dede5f4a13c440fe6756efc270cbb8/com.dashboardPlus.FtcDashboard/dash/src/components/views/TelemetryView.tsx#L21) component

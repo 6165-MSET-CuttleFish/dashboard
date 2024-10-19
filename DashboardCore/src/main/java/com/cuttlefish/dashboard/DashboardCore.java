@@ -1,17 +1,17 @@
 package com.cuttlefish.dashboard;
 
-import com.cuttlefish.dashboard.config.ValueProvider;
-import com.cuttlefish.dashboard.config.variable.BasicVariable;
-import com.cuttlefish.dashboard.config.variable.ConfigVariableDeserializer;
-import com.cuttlefish.dashboard.config.variable.ConfigVariableSerializer;
-import com.cuttlefish.dashboard.config.variable.CustomVariable;
+import config.ValueProvider;
+import config.variable.BasicVariable;
+import config.variable.ConfigVariableDeserializer;
+import config.variable.ConfigVariableSerializer;
+import config.variable.CustomVariable;
 import com.cuttlefish.dashboard.message.Message;
 import com.cuttlefish.dashboard.message.MessageDeserializer;
 import com.cuttlefish.dashboard.message.MessageType;
 import com.cuttlefish.dashboard.message.redux.ReceiveConfig;
 import com.cuttlefish.dashboard.message.redux.ReceiveTelemetry;
 import com.cuttlefish.dashboard.message.redux.SaveConfig;
-import com.cuttlefish.dashboard.telemetry.TelemetryPacket;
+import telemetry.TelemetryPacket;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.ArrayList;

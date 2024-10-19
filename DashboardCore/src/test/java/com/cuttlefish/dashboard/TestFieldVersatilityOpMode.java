@@ -1,7 +1,7 @@
 package com.cuttlefish.dashboard;
 
-import com.cuttlefish.dashboard.config.ValueProvider;
-import com.cuttlefish.dashboard.telemetry.TelemetryPacket;
+import config.ValueProvider;
+import telemetry.TelemetryPacket;
 import com.cuttlefish.dashboard.testopmode.TestOpMode;
 
 public class TestFieldVersatilityOpMode extends TestOpMode {

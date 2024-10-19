@@ -1,6 +1,6 @@
 package com.cuttlefish.dashboard.message.redux;
 
-import com.cuttlefish.dashboard.config.variable.CustomVariable;
+import config.variable.CustomVariable;
 import com.cuttlefish.dashboard.message.Message;
 import com.cuttlefish.dashboard.message.MessageType;
 

@@ -1,6 +1,6 @@
 package com.cuttlefish.dashboard;
 
-import com.cuttlefish.dashboard.telemetry.TelemetryPacket;
+import telemetry.TelemetryPacket;
 import com.cuttlefish.dashboard.testopmode.TestOpMode;
 
 /*
