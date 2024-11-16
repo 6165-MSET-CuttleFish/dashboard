@@ -13,14 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.cuttlefish.dashboard.CustomVariableConsumer;
-import com.cuttlefish.dashboard.DashboardCore;
-import com.cuttlefish.dashboard.Mutex;
-import com.cuttlefish.dashboard.R;
-import com.cuttlefish.dashboard.RobotStatus;
-import com.cuttlefish.dashboard.SendFun;
-import com.cuttlefish.dashboard.SocketHandler;
 import com.cuttlefish.dashboard.config.Config;
 import com.cuttlefish.dashboard.config.ValueProvider;
 import com.cuttlefish.dashboard.config.reflection.ReflectionConfig;
@@ -45,7 +37,22 @@ import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.util.ThreadPool;
 import com.qualcomm.robotcore.util.WebHandlerManager;
 import com.qualcomm.robotcore.util.WebServer;
+import dalvik.system.DexFile;
+import fi.iki.elonen.NanoHTTPD;
+import fi.iki.elonen.NanoWSD;
 
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
 import org.firstinspires.ftc.ftccommon.external.OnCreate;
 import org.firstinspires.ftc.ftccommon.external.OnCreateEventLoop;
 import org.firstinspires.ftc.ftccommon.external.OnCreateMenu;
@@ -64,23 +71,6 @@ import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
 import org.firstinspires.ftc.robotcore.internal.system.Misc;
 import org.firstinspires.ftc.robotcore.internal.webserver.WebHandler;
 import org.firstinspires.ftc.robotserver.internal.webserver.MimeTypesUtil;
-
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-
-import dalvik.system.DexFile;
-import fi.iki.elonen.NanoHTTPD;
-import fi.iki.elonen.NanoWSD;
 
 /**
  * Main class for interacting with the instance.
@@ -192,7 +182,7 @@ public class FtcDashboard implements OpModeManagerImpl.Notifications {
 
     private NanoWSD server = new NanoWSD(8000) {
         @Override
-        protected WebSocket openWebSocket(IHTTPSession handshake) {
+        protected NanoWSD.WebSocket openWebSocket(NanoHTTPD.IHTTPSession handshake) {
             return new DashWebSocket(handshake);
         }
     };

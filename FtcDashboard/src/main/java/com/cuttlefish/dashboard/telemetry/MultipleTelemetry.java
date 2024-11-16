@@ -1,13 +1,11 @@
 package com.cuttlefish.dashboard.telemetry;
 
 import androidx.annotation.Nullable;
-
-import org.firstinspires.ftc.robotcore.external.Func;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.firstinspires.ftc.robotcore.external.Func;
+import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 /**
  * Delegate for a list of multiple telemetry objects.

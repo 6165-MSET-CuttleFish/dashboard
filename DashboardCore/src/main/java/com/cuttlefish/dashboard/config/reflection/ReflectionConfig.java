@@ -4,6 +4,7 @@ import com.cuttlefish.dashboard.config.variable.BasicVariable;
 import com.cuttlefish.dashboard.config.variable.ConfigVariable;
 import com.cuttlefish.dashboard.config.variable.CustomVariable;
 import com.cuttlefish.dashboard.config.variable.VariableType;
+
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
