@@ -161,13 +161,13 @@ project.afterEvaluate {
                 artifact androidSourcesJar
                 artifact androidJavadocsJar
                 groupId = "com.github.6165-MSET-CuttleFish"
-                artifactId = "dashboard"
+                artifactId = "ftc-dashboard"
                 version dashboard_version
 
                 pom {
                     description = "Web dashboard designed for FTC"
-                    name = "Dashboard+"
-                    url = "https://github.com/6165-MSET-CuttleFish/dashboard"
+                    name = "FTC Dashboard"
+                    url = "https://github.com/6165-MSET-CuttleFish/ftc-dashboard"
 
                     licenses {
                         license {
@@ -181,12 +181,12 @@ project.afterEvaluate {
                         developer {
                             id = "6165-MSET-CuttleFish"
                             name = "MSET CuttleFish"
-                            email = "msetcuttlefish6165@gmail.com"
+                            email = "aadit.noronha@gmail.com"  // Replace with your team's email
                         }
                     }
 
                     scm {
-                        url = "https://github.com/6165-MSET-CuttleFish/dashboard"
+                        url = "https://github.com/6165-MSET-CuttleFish/ftc-dashboard"
                     }
                 }
 
