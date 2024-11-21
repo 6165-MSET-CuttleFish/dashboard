@@ -42,7 +42,7 @@ project.afterEvaluate {
                 pom {
                     description = "Web dashboard designed for FTC"
                     name = "FTC Dashboard"
-                    url = "https://github.com/6165-MSET-CuttleFish/dashboard"
+                    url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
 
                     licenses {
                         license {
@@ -61,7 +61,7 @@ project.afterEvaluate {
                     }
 
                     scm {
-                        url = "https://github.com/6165-MSET-CuttleFish/dashboard"
+                        url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
                     }
                 }
             }
