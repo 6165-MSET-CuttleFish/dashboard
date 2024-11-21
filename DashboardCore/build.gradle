@@ -35,14 +35,14 @@ project.afterEvaluate {
                 artifact jar
                 artifact sourcesJar
 
-                groupId = "com.acmerobotics.dashboard"
+                groupId = "com.cuttlefish.dashboard"
                 artifactId = "core"
                 version dashboard_version
 
                 pom {
                     description = "Web dashboard designed for FTC"
                     name = "FTC Dashboard"
-                    url = "https://github.com/acmerobotics/ftc-dashboard"
+                    url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
 
                     licenses {
                         license {
@@ -61,7 +61,7 @@ project.afterEvaluate {
                     }
 
                     scm {
-                        url = "https://github.com/acmerobotics/ftc-dashboard"
+                        url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
                     }
                 }
             }
