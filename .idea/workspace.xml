@@ -9,7 +9,61 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8b7517-ed6a-477b-a739-65be09715ff4" name="Changes" comment="" />
+    <list default="true" id="3d8b7517-ed6a-477b-a739-65be09715ff4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/CustomVariableConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/DashboardCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/Mutex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/RobotStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/SendFun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/SocketHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Alpha.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Canvas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/CanvasOp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Fill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Grid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Polygon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Polyline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Rotation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Scale.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Spline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Stroke.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/StrokeWidth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Text.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/canvas/Translate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/ConstantProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/ValueProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/reflection/ArrayProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/reflection/FieldProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/reflection/ReflectionConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/variable/BasicVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/variable/ConfigVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/variable/ConfigVariableDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/variable/ConfigVariableSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/variable/CustomVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/config/variable/VariableType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/MessageDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/MessageType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/GetConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/GetRobotStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/InitOpMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/ReceiveConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/ReceiveGamepadState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/ReceiveImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/ReceiveOpModeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/ReceiveRobotStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/ReceiveTelemetry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/SaveConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/StartOpMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/message/redux/StopOpMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashboardCore/src/main/java/com/cuttlefish/dashboard/telemetry/TelemetryPacket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FtcDashboard/src/main/java/com/cuttlefish/dashboard/FtcDashboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FtcDashboard/src/main/java/com/cuttlefish/dashboard/config/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FtcDashboard/src/main/java/com/cuttlefish/dashboard/telemetry/MultipleTelemetry.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +72,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/aaditnoronha/.android/avd/Pixel_2_API_34.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -84,7 +138,7 @@
   </component>
   <component name="RunManager">
     <configuration name="TeamCode" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="dashboard.TeamCode.main" />
+      <module name="new-ftc-dashboard.TeamCode.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -100,40 +154,11 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Hybrid>
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Java>
         <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
         <option name="DEBUG_SANDBOX_SDK" value="false" />
       </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_PROFILING_ENABLED" value="false" />
