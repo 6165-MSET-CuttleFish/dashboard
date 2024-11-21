@@ -1,6 +1,5 @@
 import { Component, ChangeEvent, createRef, MutableRefObject } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
-import React from 'react';
 
 import { RootState } from '@/store/reducers';
 import { initOpMode, startOpMode, stopOpMode } from '@/store/actions/opmode';
@@ -18,6 +17,9 @@ import { ReactComponent as GamepadIcon } from '@/assets/icons/gamepad.svg';
 import { ReactComponent as GamepadNotSupportedIcon } from '@/assets/icons/gamepad_not_supported.svg';
 import { STOP_OP_MODE_TAG } from '@/store/types/opmode';
 import ToolTip from '@/components/ToolTip';
+
+import Field from './FieldView/Field';
+
 
 type OpModeViewState = {
   selectedOpMode: string;
@@ -55,6 +57,8 @@ const ActionButton = ({
 );
 
 class OpModeView extends Component<OpModeViewProps, OpModeViewState> {
+  private fieldRef: RefObject<Field>;
+
   gamepadUnsupportedTooltipRef: MutableRefObject<HTMLDivElement | null>;
   gamepadUnsupportedTooltipTimeout: ReturnType<typeof setTimeout> | null = null;
 
@@ -65,12 +69,13 @@ class OpModeView extends Component<OpModeViewProps, OpModeViewState> {
       selectedOpMode: '',
       shouldShowGamepadUnsupportedTooltip: false,
     };
-
     this.gamepadUnsupportedTooltipRef = createRef();
 
     this.onChange = this.onChange.bind(this);
-  }
 
+    this.fieldRef = createRef<Field>(); // Create a ref for Field
+
+  }
 
   gamepadIconsHover() {
     let myTimeout: ReturnType<typeof setTimeout> | null = null;
@@ -91,6 +96,18 @@ class OpModeView extends Component<OpModeViewProps, OpModeViewState> {
       shouldShowGamepadUnsupportedTooltip: false,
     }));
   }
+  //rice pls dont hate me
+  handleSaveToFile() {
+    if (!this.fieldRef.current) {
+      const fieldInstance = new Field(this.fieldRef.current);
+      this.fieldRef.current = fieldInstance;
+    }
+    if (this.fieldRef.current) {
+     this.fieldRef.current.saveToFile('myFieldData.txt');
+    }
+    this.props.stopOpMode();
+
+    }
 
   static getDerivedStateFromProps(
     props: OpModeViewProps,
@@ -162,6 +179,16 @@ class OpModeView extends Component<OpModeViewProps, OpModeViewState> {
       </ActionButton>
     );
   }
+  renderRecordButton(){
+      return (
+          <ActionButton
+            className="border-yellow-200 bg-yellow-100 transition-colors"
+            onClick={() => this.handleSaveToFile()}
+          >
+        Save to File
+      </ActionButton>
+    );
+  }
 
   renderButtons() {
     const { activeOpMode, activeOpModeStatus, opModeList } = this.props;
@@ -181,6 +208,7 @@ class OpModeView extends Component<OpModeViewProps, OpModeViewState> {
       return (
               <span>
                 {this.renderStopButton()}
+                {this.renderRecordButton()}
               </span>
             );
     } else if (activeOpModeStatus === OpModeStatus.STOPPED) {
