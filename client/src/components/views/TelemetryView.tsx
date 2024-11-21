@@ -47,7 +47,7 @@ const TelemetryView = ({
 
 const telemetryLines = Object.keys(data).map((key) => {
   // Check if the key contains the string "Log Entry "
-  if (!key.includes("Log Entry ")) {
+  if (!key.includes("Log Entry ")) {    
     return (
       <span
         key={key}

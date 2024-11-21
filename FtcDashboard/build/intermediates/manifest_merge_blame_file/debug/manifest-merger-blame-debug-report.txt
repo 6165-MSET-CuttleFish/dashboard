@@ -4,8 +4,8 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="24"
-6-->/Users/admin/Documents/Robotics/Repositories/dashboard/FtcDashboard/src/main/AndroidManifest.xml
+6-->/Users/admin/Documents/GitHub/dashboard/FtcDashboard/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="28" />
-7-->/Users/admin/Documents/Robotics/Repositories/dashboard/FtcDashboard/src/main/AndroidManifest.xml
+7-->/Users/admin/Documents/GitHub/dashboard/FtcDashboard/src/main/AndroidManifest.xml
 8
 9</manifest>
