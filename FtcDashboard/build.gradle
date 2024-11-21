@@ -160,13 +160,13 @@ project.afterEvaluate {
                 artifact androidSourcesJar
                 artifact androidJavadocsJar
                 groupId = "com.github.6165-MSET-CuttleFish"
-                artifactId = "dashboard-plus"
+                artifactId = "dashboard"
                 version dashboard_version
 
                 pom {
                     description = "Web dashboard designed for FTC"
                     name = "FTC Dashboard"
-                    url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
+                    url = "https://github.com/6165-MSET-CuttleFish/dashboard"
 
                     licenses {
                         license {
@@ -185,7 +185,7 @@ project.afterEvaluate {
                     }
 
                     scm {
-                        url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
+                        url = "https://github.com/6165-MSET-CuttleFish/dashboard"
                     }
                 }
 
