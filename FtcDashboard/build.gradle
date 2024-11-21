@@ -11,14 +11,12 @@ apply plugin: "maven-publish"
 apply plugin: "checkstyle"
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
 
     defaultConfig {
-        minSdkVersion 24
+        minSdkVersion 23
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 26
     }
 
     compileOptions {
@@ -51,12 +49,13 @@ task copyDashAssets(type: Copy) {
 }
 
 copyDashAssets.dependsOn cleanDashAssets
-//copyDashAssets.dependsOn yarn_build
+copyDashAssets.dependsOn yarn_build
 
 android.libraryVariants.all { variant ->
     variant.preBuildProvider.get().dependsOn copyDashAssets
 }
 
+// adapted from https://github.com/Genymobile/gnirehtet/blob/master/config/android-checkstyle.gradle
 check.dependsOn "checkstyle"
 
 checkstyle {
@@ -71,6 +70,8 @@ task checkstyle(type: Checkstyle) {
     ignoreFailures = true
 }
 
+// I"d like to replace each() with collectMany() if only I knew how
+// Also, the static suggestion here is wrong but I lack the incantation to suppress it
 def javaSources() {
     def files = []
     android.sourceSets.each { sourceSet ->
@@ -92,6 +93,8 @@ repositories {
     mavenCentral()
 }
 
+// Probably not worth combining with addPomDependencies()
+// Keep them in sync manually
 dependencies {
     api(project(":DashboardCore")) {
         transitive = false
@@ -112,6 +115,7 @@ dependencies {
 def addPomDependencies(root) {
     def depsNode = root.appendNode("dependencies")
 
+    // Apparently you can make closures but not "inner methods"
     def addDep = { groupId, artifactId, version ->
         def n = depsNode.appendNode("dependency")
         n.appendNode("groupId", groupId)
@@ -120,6 +124,7 @@ def addPomDependencies(root) {
         return n
     }
 
+    addDep("com.acmerobotics.dashboard", "core", dashboard_version)
 
     ["RobotCore", "Hardware", "RobotServer", "FtcCommon"].forEach {
         addDep("org.firstinspires.ftc", it, min_sdk_version)
@@ -160,14 +165,15 @@ project.afterEvaluate {
                 artifact bundleReleaseAar
                 artifact androidSourcesJar
                 artifact androidJavadocsJar
-                groupId = "com.github.6165-MSET-CuttleFish"
-                artifactId = "ftc-dashboard"
+
+                groupId = "com.acmerobotics.dashboard"
+                artifactId = "dashboard"
                 version dashboard_version
 
                 pom {
                     description = "Web dashboard designed for FTC"
                     name = "FTC Dashboard"
-                    url = "https://github.com/6165-MSET-CuttleFish/ftc-dashboard"
+                    url = "https://github.com/acmerobotics/ftc-dashboard"
 
                     licenses {
                         license {
@@ -179,18 +185,22 @@ project.afterEvaluate {
 
                     developers {
                         developer {
-                            id = "6165-MSET-CuttleFish"
-                            name = "MSET CuttleFish"
-                            email = "aadit.noronha@gmail.com"  // Replace with your team's email
+                            id = "rbrott"
+                            name = "Ryan Brott"
+                            email = "rcbrott@gmail.com"
                         }
                     }
 
                     scm {
-                        url = "https://github.com/6165-MSET-CuttleFish/ftc-dashboard"
+                        url = "https://github.com/acmerobotics/ftc-dashboard"
                     }
                 }
 
+                // Seems like you can"t define ad hoc software components without a plugin.
+                // Remind me never to read the Gradle docs again.
                 pom.withXml {
+                    // Android Studio complains here, but passing null straight up doesn't work
+                    //noinspection GroovyImplicitNullArgumentCall
                     def root = asNode()
                     addPomDependencies(root)
                 }

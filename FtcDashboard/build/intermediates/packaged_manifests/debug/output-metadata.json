@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.cuttlefish.dashboard",
+  "applicationId": "com.acmerobotics.dashboard",
   "variantName": "debug",
   "elements": [
     {
