@@ -11,12 +11,14 @@ apply plugin: "maven-publish"
 apply plugin: "checkstyle"
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion 24
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
     }
 
     compileOptions {
@@ -49,7 +51,7 @@ task copyDashAssets(type: Copy) {
 }
 
 copyDashAssets.dependsOn cleanDashAssets
-copyDashAssets.dependsOn yarn_build
+//copyDashAssets.dependsOn yarn_build
 
 android.libraryVariants.all { variant ->
     variant.preBuildProvider.get().dependsOn copyDashAssets
@@ -118,7 +120,6 @@ def addPomDependencies(root) {
         return n
     }
 
-    addDep("com.cuttlefish.dashboard", "core", dashboard_version)
 
     ["RobotCore", "Hardware", "RobotServer", "FtcCommon"].forEach {
         addDep("org.firstinspires.ftc", it, min_sdk_version)
@@ -160,13 +161,13 @@ project.afterEvaluate {
                 artifact androidSourcesJar
                 artifact androidJavadocsJar
                 groupId = "com.github.6165-MSET-CuttleFish"
-                artifactId = "dashboard-plus"
+                artifactId = "ftc-dashboard"
                 version dashboard_version
 
                 pom {
                     description = "Web dashboard designed for FTC"
                     name = "FTC Dashboard"
-                    url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
+                    url = "https://github.com/6165-MSET-CuttleFish/ftc-dashboard"
 
                     licenses {
                         license {
@@ -185,7 +186,7 @@ project.afterEvaluate {
                     }
 
                     scm {
-                        url = "https://github.com/6165-MSET-CuttleFish/dashboard-plus"
+                        url = "https://github.com/6165-MSET-CuttleFish/ftc-dashboard"
                     }
                 }
 
